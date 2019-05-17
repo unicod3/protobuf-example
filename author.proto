@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package main;
+
+
+message Author{
+
+	int32 id = 1;
+	string Name = 2;
+
+    repeated Book books = 3;
+}
+
+
+enum BookType{
+    EBOOK = 0;
+    PAPER = 1;
+}
+
+
+message Book{
+
+    reserved 2;
+
+    int32 id = 1;
+
+    BookType type = 3;
+
+    string name = 5;
+
+}
